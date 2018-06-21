@@ -8,7 +8,8 @@
     "tsc": "./node_modules/.bin/tsc",
     "start": "npm run build; node ./build/index.js",
     "build": "npm run tsc",
-    "copy": "cp ./.env ./build/.env"
+    "copy": "cp ./.env ./build/.env",
+    "watch": "nodemon"
   },
   "author": "Tyler Durham <tylerdurham@users.noreply.github.com>",
   "license": "MIT",
