@@ -1,9 +1,9 @@
 import * as app from './app';
 import * as dateFormat from 'dateformat';
-import { config }  from './app.config';
+import { serverConfig }  from './app.config';
 
 // Start
-console.log(`Server is listening at '${config.protocol}://${config.host}:${config.port}' with a PID of ${process.pid}.`);
+console.log(`Server is listening at '${serverConfig.protocol}://${serverConfig.host}:${serverConfig.port}' with a PID of ${process.pid}.`);
 app.startServer();
 
 //Stop

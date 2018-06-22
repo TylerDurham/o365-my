@@ -28,6 +28,20 @@ class ServerConfig {
     static get serverUrl(): string {
         return `${ServerConfig.protocol.toString()}://${ServerConfig.host}:${ServerConfig.port}`;
     }
+}
+
+class AuthConfig {
+
+    static get tenantName(): string {
+        return process.env.TENANT_NAME;
+    }
+
+    static get identityMetadata(): string {
+        var tn = this.tenantName;
+        if(tn == null) throw `Configuration error: no TENANT_NAME specified!`;
+
+        return `https://login.microsoftonline.com/${AuthConfig.tenantName}.onmicrosoft.com/.well-known/openid-configuration`
+    }
 
     static get clientId(): string {
         return process.env.MICROSOFT_APP_ID;
@@ -38,4 +52,5 @@ class ServerConfig {
     }
 }
 
-export { ServerConfig as config }; 
+export { ServerConfig as serverConfig }; 
+export { AuthConfig as authConfig };

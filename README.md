@@ -16,4 +16,5 @@ PORT=8080
 HOST=localhost
 MICROSOFT_APP_ID=your_bot_app_id_here
 MICROSOFT_APP_PASSWORD=your_password_here
+TENANT_NAME=your_tenant_name_here.onmicrosoft.com
 ```
